@@ -1,4 +1,4 @@
-# Claude Code working files (gizli kalsın)
+# Claude Code working files 
 CLAUDE.md
 PROGRESS.md
 
@@ -17,7 +17,6 @@ __pycache__/
 .venv/
 fraud_env/
 .ipynb_checkpoints/
-
 
 # IDE
 .vscode/

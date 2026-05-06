@@ -1,43 +1,43 @@
-# FraudGuard — Kredi Kartı Dolandırıcılığı Tespiti
+# FraudGuard — Credit Card Fraud Detection
 
-Üniversite Makine Öğrenmesi dersi kapsamında geliştirilen akademik proje.
+Academic project developed for a university Machine Learning course.
 
-## Problem Tanımı
+## Problem Statement
 
-Avrupa bankaları tarafından gerçekleştirilen kredi kartı işlemlerinde dolandırıcılık tespiti.
-Veri seti son derece dengesiz: 284.807 işlemden yalnızca 492'si (%0,17) dolandırıcılık.
+Detecting fraudulent transactions in credit card data from European banks.
+The dataset is highly imbalanced: only 492 out of 284,807 transactions (0.17%) are fraud.
 
-## Veri Seti
+## Dataset
 
-- **Kaynak:** [Kaggle — Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
-- **Dosya:** `data/raw/creditcard.csv`
-- **Özellikler:** V1–V28 (PCA ile anonim), `Amount`, `Time`
-- **Hedef:** `Class` (0 = normal, 1 = fraud)
+- **Source:** [Kaggle — Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **File:** `data/raw/creditcard.csv`
+- **Features:** V1–V28 (anonymized via PCA), `Amount`, `Time`
+- **Target:** `Class` (0 = legitimate, 1 = fraud)
 
-## Metodoloji
+## Methodology
 
-1. **EDA** — Sınıf dağılımı, istatistiksel özetler, korelasyon analizi (yalnızca train seti)
-2. **Ön İşleme** — StandardScaler (train fit, test transform), train/test split (80/20, stratified)
-3. **Dengesizlik Giderme** — SMOTE (yalnızca train setine)
-4. **Modeller:** Logistic Regression (baseline) → Random Forest → XGBoost
-5. **Değerlendirme:** ROC-AUC, PR-AUC, F1, Precision, Recall, Confusion Matrix
+1. **EDA** — Class distribution, statistical summaries, correlation analysis (train set only)
+2. **Preprocessing** — StandardScaler (fit on train, transform on test), 80/20 stratified split
+3. **Imbalance Handling** — SMOTE applied to training set only
+4. **Models:** Logistic Regression (baseline) → Random Forest → XGBoost
+5. **Evaluation:** ROC-AUC, PR-AUC, F1, Precision, Recall, Confusion Matrix
 
-## Temel Kural: Data Leakage Önleme
+## Data Leakage Prevention
 
-- Test seti EDA aşamasında açılmaz
-- SMOTE yalnızca training verisine uygulanır
-- Scaler train verisinde fit edilir, test verisine transform uygulanır
+- Test set is never opened or analyzed during exploration
+- SMOTE is applied only to the training set
+- Scaler is fit on training data; only `transform` is applied to the test set
 
-## Proje Yapısı
+## Project Structure
 
 ```
 fraud_guard_project/
 ├── config/
 │   └── model_params.yaml
 ├── data/
-│   ├── raw/          # ham veri (git'e eklenmez)
-│   └── processed/    # işlenmiş veri (git'e eklenmez)
-├── models/           # eğitilmiş modeller (git'e eklenmez)
+│   ├── raw/          # raw data (not committed)
+│   └── processed/    # processed data (not committed)
+├── models/           # trained models (not committed)
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_preprocessing.ipynb
@@ -47,16 +47,14 @@ fraud_guard_project/
 │   ├── 06_xgboost.ipynb
 │   └── 07_comparison.ipynb
 ├── results/
-│   ├── figures/      # PNG grafikler (dpi >= 150)
-│   └── metrics/      # CSV / JSON metrikler
-├── CLAUDE.md
-├── PROGRESS.md
+│   ├── figures/      # PNG plots (dpi >= 150)
+│   └── metrics/      # CSV / JSON metrics
 ├── README.md
 └── requirements.txt
 ```
 
-## Tekrar Üretilebilirlik
+## Reproducibility
 
-- `random_state=42` tüm model ve split işlemlerinde
-- `np.random.seed(42)` her notebook'un başında
-- Tüm hiperparametreler `config/model_params.yaml` içinde
+- `random_state=42` in every model and train/test split
+- `np.random.seed(42)` at the top of every notebook
+- All hyperparameters stored in `config/model_params.yaml`

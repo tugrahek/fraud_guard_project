@@ -1,0 +1,34 @@
+{
+  "dataset": {
+    "total_rows": 284807,
+    "total_features": 30,
+    "missing_values": 0
+  },
+  "train_set": {
+    "n_rows": 227845,
+    "n_normal": 227451,
+    "n_fraud": 394,
+    "fraud_rate": 0.001729
+  },
+  "test_set": {
+    "n_rows": 56962
+  },
+  "amount_stats": {
+    "normal_median": 22.0,
+    "fraud_median": 9.17,
+    "normal_max": 25691.16,
+    "fraud_max": 2125.87
+  },
+  "top10_features_by_class_correlation": {
+    "V17": -0.3219,
+    "V14": -0.3011,
+    "V12": -0.26,
+    "V10": -0.2179,
+    "V3": -0.1941,
+    "V16": -0.1938,
+    "V7": -0.1862,
+    "V11": 0.1537,
+    "V4": 0.135,
+    "V18": -0.1087
+  }
+}

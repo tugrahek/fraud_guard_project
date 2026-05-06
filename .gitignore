@@ -1,0 +1,28 @@
+# Claude Code working files (gizli kalsın)
+CLAUDE.md
+PROGRESS.md
+
+# Data
+data/raw/*.csv
+data/processed/*.pkl
+data/processed/*.csv
+
+# Models
+models/*.pkl
+models/*.joblib
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+fraud_env/
+.ipynb_checkpoints/
+
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,42 @@
+{
+  "step": "11_business_cost",
+  "cost_assumptions": {
+    "cost_fn_usd": 100,
+    "cost_fp_usd": 10
+  },
+  "naive_baseline_cost": 9800,
+  "scenarios": [
+    {
+      "name": "Varsay\u0131lan (0.5000)",
+      "precision": 0.7757,
+      "recall": 0.8469,
+      "f1": 0.8098,
+      "TP": 83,
+      "FP": 24,
+      "FN": 15,
+      "total_cost_usd": 1740
+    },
+    {
+      "name": "F1-Optimal (0.9457)",
+      "precision": 0.9195,
+      "recall": 0.8163,
+      "f1": 0.8649,
+      "TP": 80,
+      "FP": 7,
+      "FN": 18,
+      "total_cost_usd": 1870
+    },
+    {
+      "name": "Maliyet-Optimal (0.4581)",
+      "precision": 0.7589,
+      "recall": 0.8673,
+      "f1": 0.8095,
+      "TP": 85,
+      "FP": 27,
+      "FN": 13,
+      "total_cost_usd": 1570
+    }
+  ],
+  "cost_optimal_threshold": 0.4581,
+  "cost_optimal_total_usd": 1570
+}

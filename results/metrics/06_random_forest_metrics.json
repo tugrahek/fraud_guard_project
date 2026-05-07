@@ -1,0 +1,19 @@
+{
+  "model": "RandomForestClassifier",
+  "step": "06_random_forest",
+  "class_weight": "balanced",
+  "smote": false,
+  "n_estimators": 100,
+  "max_depth": null,
+  "precision": 0.9605,
+  "recall": 0.7449,
+  "f1": 0.8391,
+  "roc_auc": 0.9529,
+  "pr_auc": 0.8539,
+  "confusion_matrix": {
+    "TN": 56861,
+    "FP": 3,
+    "FN": 25,
+    "TP": 73
+  }
+}

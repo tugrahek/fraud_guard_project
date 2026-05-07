@@ -1,0 +1,78 @@
+{
+  "step": "10_model_comparison",
+  "models": [
+    {
+      "model": "Logistic Regression (0.50)",
+      "Precision": 0.8267,
+      "Recall": 0.6327,
+      "F1": 0.7168,
+      "ROC-AUC": 0.9605,
+      "PR-AUC": 0.7414,
+      "FP": 13,
+      "FN": 36
+    },
+    {
+      "model": "Random Forest (0.50)",
+      "Precision": 0.9605,
+      "Recall": 0.7449,
+      "F1": 0.8391,
+      "ROC-AUC": 0.9529,
+      "PR-AUC": 0.8539,
+      "FP": 3,
+      "FN": 25
+    },
+    {
+      "model": "XGBoost (0.50)",
+      "Precision": 0.7757,
+      "Recall": 0.8469,
+      "F1": 0.8098,
+      "ROC-AUC": 0.9815,
+      "PR-AUC": 0.8597,
+      "FP": 24,
+      "FN": 15
+    },
+    {
+      "model": "XGBoost (optimal 0.9457)",
+      "Precision": 0.9195,
+      "Recall": 0.8163,
+      "F1": 0.8649,
+      "ROC-AUC": 0.9815,
+      "PR-AUC": 0.8597,
+      "FP": 7,
+      "FN": 18
+    },
+    {
+      "model": "Isolation Forest (unsupervised)",
+      "Precision": 0.3084,
+      "Recall": 0.3367,
+      "F1": 0.322,
+      "ROC-AUC": 0.9543,
+      "PR-AUC": 0.218,
+      "FP": 74,
+      "FN": 65
+    }
+  ],
+  "best_per_metric": {
+    "Precision": {
+      "model": "Random Forest (0.50)",
+      "value": 0.9605
+    },
+    "Recall": {
+      "model": "XGBoost (0.50)",
+      "value": 0.8469
+    },
+    "F1": {
+      "model": "XGBoost (optimal 0.9457)",
+      "value": 0.8649
+    },
+    "ROC-AUC": {
+      "model": "XGBoost (0.50)",
+      "value": 0.9815
+    },
+    "PR-AUC": {
+      "model": "XGBoost (0.50)",
+      "value": 0.8597
+    }
+  },
+  "recommended": "XGBoost (optimal 0.9457) \u2014 highest F1 (0.8649) with lowest FP (7)"
+}

@@ -1,0 +1,20 @@
+{
+  "scaler": "StandardScaler",
+  "fit_on": "X_train only",
+  "n_features": 30,
+  "amount_before": {
+    "mean": 88.1763,
+    "std": 250.7226,
+    "min": 0.0,
+    "max": 25691.16
+  },
+  "amount_after": {
+    "mean": 0.0,
+    "std": 1.000002
+  },
+  "leakage_check": {
+    "scaler_fitted_on_test": false,
+    "train_mean_near_zero": true,
+    "train_std_near_one": true
+  }
+}

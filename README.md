@@ -87,6 +87,65 @@ fraud_guard_project/
 └── requirements.txt
 ```
 
+## How to Run
+
+### Prerequisites
+
+- Python 3.10+
+- ~500 MB disk space for the dataset
+
+### Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/tugrahek/fraud_guard_project.git
+cd fraud_guard_project
+
+# 2. Create and activate a virtual environment
+python -m venv fraud_env
+# Windows
+fraud_env\Scripts\activate
+# macOS / Linux
+source fraud_env/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+```
+
+### Dataset
+
+Download `creditcard.csv` from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+and place it at:
+
+```
+data/raw/creditcard.csv
+```
+
+### Run Notebooks
+
+Open Jupyter and run the notebooks **in order**:
+
+```bash
+jupyter notebook
+```
+
+| Notebook | Description |
+|----------|-------------|
+| `01_eda.ipynb` | Exploratory data analysis |
+| `02_preprocessing.ipynb` | Scaling and train/test split |
+| `03_baseline.ipynb` | Logistic Regression baseline |
+| `04_random_forest.ipynb` | Random Forest |
+| `05_xgboost.ipynb` | XGBoost (main model) |
+| `06_isolation_forest.ipynb` | Isolation Forest (unsupervised) |
+| `07_threshold_tuning.ipynb` | Decision threshold analysis |
+| `08_model_comparison.ipynb` | Final model comparison |
+| `09_business_cost.ipynb` | Business cost analysis |
+| `10_final_report.ipynb` | Full project summary |
+
+> Each notebook must be run with **Kernel → Restart & Run All** to ensure reproducibility.
+
+---
+
 ## Reproducibility
 
 - `random_state=42` in every model and train/test split

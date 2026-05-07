@@ -32,3 +32,9 @@ xgboost:
   subsample: 0.8
   colsample_bytree: 0.8
   scale_pos_weight: 577  # neg/pos ratio from train set: 227451 / 394
+
+isolation_forest:
+  n_estimators: 100
+  contamination: 0.00173  # 394 / 227845 = fraud rate in train set
+  random_state: 42
+  max_samples: auto

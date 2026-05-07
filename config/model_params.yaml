@@ -31,4 +31,4 @@ xgboost:
   learning_rate: 0.1
   subsample: 0.8
   colsample_bytree: 0.8
-  scale_pos_weight: 1  # will be set to ratio of neg/pos after EDA
+  scale_pos_weight: 577  # neg/pos ratio from train set: 227451 / 394

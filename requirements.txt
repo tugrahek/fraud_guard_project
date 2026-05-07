@@ -8,3 +8,4 @@ jupyter
 notebook
 pyyaml
 joblib
+xgboost>=2.0

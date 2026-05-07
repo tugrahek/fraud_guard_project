@@ -1,0 +1,17 @@
+{
+  "model": "LogisticRegression",
+  "step": "05_baseline",
+  "class_weight": null,
+  "smote": false,
+  "precision": 0.8267,
+  "recall": 0.6327,
+  "f1": 0.7168,
+  "roc_auc": 0.9605,
+  "pr_auc": 0.7414,
+  "confusion_matrix": {
+    "TN": 56851,
+    "FP": 13,
+    "FN": 36,
+    "TP": 62
+  }
+}

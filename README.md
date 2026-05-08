@@ -1,7 +1,5 @@
 # FraudGuard — Credit Card Fraud Detection
 
-Academic project developed for a university Machine Learning course.
-
 ## Problem Statement
 
 Detecting fraudulent transactions in credit card data from European banks.
